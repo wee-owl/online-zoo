@@ -228,12 +228,12 @@
 
 .donate__sum {
     display: flex;
-    justify-content: flex-start; /*Для резины установить space-between*/
+    justify-content: space-between; /*Для резины установить не flex-start, а space-between*/
     align-items: center;
     max-width: 952px;
     width: 100%;
 }
-/* Убрать для резины все отступы */
+/* Убрать для резины все отступы 
 .donate__sum-item:first-of-type, 
 .donate__sum-item:nth-of-type(2), 
 .donate__sum-item:nth-of-type(3), 
@@ -253,10 +253,10 @@
 .donate__sum-item:nth-of-type(7) {
     margin-right: 88px;
 }
-
+*/
 .donate__sum-item {
     position: relative;
-    margin-left: 12px;  /* Убрать для резины */
+  /*  margin-left: 12px;   Убрать для резины */
     font-weight: 500;
     font-size: 26px;
     line-height: 36px;
@@ -350,12 +350,13 @@
 }
 
 .donate__radio-menu input {
-    margin: 0px 11px 3px 0;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #FE9013;
+    width: 10px;
+    height: 10px;
+    margin: 0px 13px 3px 0;
+    outline: 1px solid #FE9013;
+    outline-offset: 2px;
+    border-color: transparent;
     border-radius: 50%;
-    background-color: transparent;
     transition: 0.2s all ease-in-out;
     cursor: pointer;
     -webkit-appearance: none;
@@ -372,8 +373,9 @@
 }
 
 .donate__radio-menu input:checked {
-    border-color: #4B9200;
-    background: #4B9200;
+    border: 1px solid #FE9013;
+    border-radius: 50%;
+    background: #FE9013;
     cursor: pointer;
 }
 
