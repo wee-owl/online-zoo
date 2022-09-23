@@ -11,15 +11,14 @@
     <link rel="preload" href="../assets/fonts/Roboto-regular-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../assets/fonts/Roboto-light-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../css/page__donate.css">
-    <!--<script src="..." type="module"></script>-->
+    <script src="../js/index.js" type="module"></script>
 </head>
 <body>
 
     <header class="header" id="page__donate">
-        <h1 hidden>PetStory Online</h1>
         <div class="container header__container">
             <a href="../main.html" class="header__logo">
-                <img src="../assets/icons/logo.svg" alt="Logo-link to the main page of the site">
+                <h1 class="header__title">PetStory online</h1>
             </a>
             <nav class="header__nav nav">
                 <ul class="nav__list">
@@ -62,6 +61,33 @@
                     <p class="donate__content-subtitle">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
 
                     <div class="donate__amout-block">
+                        <div class="amount__animal">
+                            <img src="../assets/icons/5000.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/2000.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal amount__animal-active">
+                            <img src="../assets/icons/1000.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/500.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/250.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/100.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/50.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                        <div class="amount__animal">
+                            <img src="../assets/icons/25.svg" class="amount__animal-icon" alt="Image with information about the size of the animal's diet, depending on the donation amount">
+                        </div>
+                    </div>
+
+<!--                <div class="donate__amout-block">
                         <div class="amount__count">
                             <p class="amount__number">4</p>
                             <p class="amount__text">Panda diet for the day.</p>
@@ -76,17 +102,17 @@
                             <img src="../assets/icons/panda_big.svg" class="amount__animal-icon" alt="Big panda icon">
                         </div>
                     </div>
+-->
 
                     <div class="donate__band-block">
                         <p class="donate__band-title">Amount</p>
                         <div class="donate__band">
                             <div class="donate__band-base">
-                                <div class="donate__center-band">
+                                <div class="donate__center-band"></div>
+                                <div class="donate__circles">
                                     <div class="donate__circle"></div>
                                     <div class="donate__circle"></div>
-                                    <div class="donate__circle">
-                                        <div class="donate__circle-active"></div>
-                                    </div>
+                                    <div class="donate__circle donate__circle-active"></div>
                                     <div class="donate__circle"></div>
                                     <div class="donate__circle"></div>
                                     <div class="donate__circle"></div>
@@ -111,7 +137,7 @@
 
                     <form class="donate__form" action="#" method="get" aria-label="Subscription email address field">
                         <label class="donate__label">
-                            <input type="number" class="donate__input" min="1" max="9999" name="amount" placeholder="Another amount" required>
+                            <input type="number" class="donate__input" name="amount" placeholder="Another amount" maxlength="4" oninput="this.value=this.value.replace(/[^\d]/g,'');" required>
                         </label>
                     </form>
 
