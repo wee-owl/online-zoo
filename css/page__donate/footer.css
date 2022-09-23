@@ -1,0 +1,231 @@
+.footer {
+    background-color: #111115;
+    padding: 40px 30px 50px;
+}
+
+.footer__logo-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.footer__logo {
+    transition: 0.5s ease-in-out;
+}
+
+.footer__logo:hover {
+    transform: scale(1.1);
+}
+
+.footer__sub-title {
+    margin-bottom: 14px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.footer__form {
+    position: relative;
+    border-radius: 2px;
+    background-color: #111115;
+}
+
+.footer__label {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer__input {
+    width: 228px;
+    height: 42px;
+    padding: 10px 7px 10px 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #BDBDBD;
+    border: 0.7px solid #F9804B;
+    background-color: transparent;
+}
+
+.footer__form-error {
+    position: absolute;
+    display: block;
+    margin-top: 50px;
+    color: #D31414;
+    text-align: left;
+    font-size: 12px;
+    display: none;
+}
+
+.footer__button-submit {
+    width: 129px;
+    height: 42px;
+    background: #F1F3F2;
+    border: 1px solid #333B41;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.footer__input:focus {
+    border-color: #4B9200;
+}
+
+.footer__input:invalid:not(:placeholder-shown) {
+    border-color: #D31414;
+    color: #D31414;
+}
+
+.footer__input:valid:not(:placeholder-shown) {
+    border-color: #4B9200;
+}
+
+.footer__input:invalid:not(:placeholder-shown) + .footer__form-error {
+    display: block;
+}
+
+.footer__input:focus::placeholder {
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.footer__input:focus-visible {
+    outline: transparent !important;
+}
+
+.footer__input:focus:placeholder-shown + .footer__form-error + .footer__button-submit {
+    border-color: #D31414;
+    color: #D31414;
+}
+
+.footer__input:invalid:not(:placeholder-shown) + .footer__form-error + .footer__button-submit {
+    border-color: #D31414;
+    color: #D31414;
+}
+
+.footer__input:valid:not(:placeholder-shown) + .footer__form-error + .footer__button-submit {
+    border-color: #4B9200;
+    color: #4B9200;
+}
+
+.footer__button-donate {
+    display: block;
+    max-width: 298px;
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 44px;
+    padding: 16px 0;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__button-donate:hover {
+    background: #E47209;
+}
+
+.footer__button-donate:active {
+    background: #4B9200;
+}
+
+.footer__social-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer__social-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.footer__social-link svg {
+    color: #C4C4C4;
+}
+
+.footer__social-link:hover svg, 
+.footer__social-link:active svg, 
+.footer__social-link:hover, 
+.footer__social-link:active {
+    color: #4B9200;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 480px;
+    width: 100%;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px 58px;
+    flex-wrap: wrap;
+}
+
+.footer__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.footer__link_active {
+    cursor: default;
+}
+
+.footer__link_active, 
+.footer__link:hover, 
+.footer__link:active {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: background 1s ease-in-out;
+}
+
+.footer__copyright {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer__copyright p:first-of-type {
+    margin-bottom: 10px;
+}
+
+.footer__copyright:hover, 
+.footer__copyright:active {
+    color: #4B9200;
+    text-decoration: underline;
+}

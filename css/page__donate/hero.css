@@ -1,0 +1,13 @@
+.hero {
+    background-image: url('../../assets/images/hero_bg_donate.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #283035;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.hero__container {
+    height: 386px;
+}
