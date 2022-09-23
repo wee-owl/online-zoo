@@ -1,0 +1,11 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'default.css';
+
+@import 'page__main/header.css';
+@import 'page__main/hero.css';
+@import 'page__main/backstage.css';
+@import 'page__main/pets.css';
+@import 'page__main/feed.css';
+@import 'page__main/testimonials.css';
+@import 'page__main/footer.css';
