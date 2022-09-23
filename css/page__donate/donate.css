@@ -1,6 +1,6 @@
 .donate {
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-    padding: 40px 30px 180px;
+	padding: 40px 30px 180px;
 }
 
 .donate__title {
@@ -71,55 +71,6 @@
     align-items: center;
 }
 
-.amount__animal {
-    display: none;
-    animation: pulsing 1.5s;
-    -webkit-animation: pulsing 1.5s;
-}
-
-.amount__animal-active {
-    display: block;
-}
-
-@keyframes pulsing {
-    0% {
-        -webkit-transform: scale(0.5, 0.5);
-        transform: scale(0.5, 0.5)
-    }
-    50% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.0, 1.0);
-    }
-    50% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        -webkit-transform: scale(0.5, 0.5);
-        transform: scale(1.0, 1.0);
-    }
-}
-
-@-webkit-keyframes pulsing {
-    0% {
-        -webkit-transform: scale(0.5, 0.5);
-        transform: scale(0.5, 0.5)
-    }
-    50% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.0, 1.0);
-    }
-    50% {
-        -webkit-transform: scale(1.0, 1.0);
-        transform: scale(1.2, 1.2);
-    }
-    100% {
-        -webkit-transform: scale(0.5, 0.5);
-        transform: scale(1.0, 1.0);
-    }
-}
-
-/*
 .amount__count {
     align-items: center;
 
@@ -146,7 +97,6 @@
 .amount__sign {
     margin: 29px 64px 0 11px;
 }
-*/
 
 .donate__band-block {
     margin-bottom: 50px;
@@ -173,7 +123,6 @@
 }
 
 .donate__band-base {
-    position: relative;
     height: 27px;
     padding: 12px;
     background-color: #404950;
@@ -191,32 +140,38 @@
     background-color: #72828E;
 }
 
-.donate__circles {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 951px;
-    width: 100%;
-}
-
 .donate__circle {
     position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFEE2E;
+    cursor: pointer;
+}
+
+.donate__circle::before {
+    content: '';
+    position: absolute;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 20C25 22.7614 22.7614 25 20 25C17.2386 25 15 22.7614 15 20C15 17.2386 17.2386 15 20 15C22.7614 15 25 17.2386 25 20Z' fill='%23FFEE2E'/%3E%3C/svg%3E%0A");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    inset: 0;
+    transform: translate(-15px, -15px);
     background-color: transparent;
     cursor: pointer;
 }
 
 .donate__circle-active {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 20C25 22.7614 22.7614 25 20 25C17.2386 25 15 22.7614 15 20C15 17.2386 17.2386 15 20 15C22.7614 15 25 17.2386 25 20Z' fill='%23FFEE2E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.4774 19.9999C31.4774 26.3438 26.3443 31.4769 20.0004 31.4769C13.6566 31.4769 8.52344 26.3438 8.52344 19.9999C8.52344 13.6561 13.6566 8.52295 20.0004 8.52295C26.3443 8.52295 31.4774 13.6561 31.4774 19.9999ZM20.0004 10.3147C25.3757 10.3147 29.7341 14.6246 29.7341 19.9999C29.7341 25.3752 25.3757 29.7336 20.0004 29.7336C14.6251 29.7336 10.3152 25.3752 10.3152 19.9999C10.3152 14.6246 14.6251 10.3147 20.0004 10.3147Z' fill='%23FE9013'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0C31.0412 0 40 8.95884 40 20C40 31.0412 31.0412 40 20 40C8.95884 40 0 31.0412 0 20C0 8.95884 8.95884 0 20 0ZM20 1.79177C30.0726 1.79177 38.2567 9.92736 38.2567 20C38.2567 30.0726 30.0726 38.2567 20 38.2567C9.92736 38.2567 1.79177 30.0726 1.79177 20C1.79177 9.92736 9.92736 1.79177 20 1.79177Z' fill='%23FE9013'/%3E%3C/svg%3E%0A");
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    inset: 0;
+    transform: translate(-16px, -15px);
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='5' fill='%23FFEE2E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M31.4774 19.9999C31.4774 26.3438 26.3443 31.4769 20.0004 31.4769C13.6566 31.4769 8.52344 26.3438 8.52344 19.9999C8.52344 13.6561 13.6566 8.52295 20.0004 8.52295C26.3443 8.52295 31.4774 13.6561 31.4774 19.9999ZM20.0004 10.3147C25.3757 10.3147 29.7341 14.6246 29.7341 19.9999C29.7341 25.3752 25.3757 29.7336 20.0004 29.7336C14.6251 29.7336 10.3152 25.3752 10.3152 19.9999C10.3152 14.6246 14.6251 10.3147 20.0004 10.3147Z' fill='%23FE9013'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M20 0C31.0412 0 40 8.95884 40 20C40 31.0412 31.0412 40 20 40C8.95884 40 0 31.0412 0 20C0 8.95884 8.95884 0 20 0ZM20 1.79177C30.0726 1.79177 38.2567 9.92736 38.2567 20C38.2567 30.0726 30.0726 38.2567 20 38.2567C9.92736 38.2567 1.79177 30.0726 1.79177 20C1.79177 9.92736 9.92736 1.79177 20 1.79177Z' fill='%23FE9013'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: default;
 }
 
@@ -228,12 +183,12 @@
 
 .donate__sum {
     display: flex;
-    justify-content: flex-start; /*Для резины установить space-between*/
+    justify-content: flex-start;
     align-items: center;
     max-width: 952px;
     width: 100%;
 }
-/* Убрать для резины все отступы */
+
 .donate__sum-item:first-of-type, 
 .donate__sum-item:nth-of-type(2), 
 .donate__sum-item:nth-of-type(3), 
@@ -256,7 +211,7 @@
 
 .donate__sum-item {
     position: relative;
-    margin-left: 12px;  /* Убрать для резины */
+    margin-left: 12px;
     font-weight: 500;
     font-size: 26px;
     line-height: 36px;
@@ -322,9 +277,7 @@
 }
 
 .donate__input:focus {
-    border-color: #4B9200;
-    color: #4B9200;
-    background-image: url("data:image/svg+xml,%3Csvg width='10' height='20' viewBox='0 0 10 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.07792 6.25974C7.66234 5.87013 7.24675 5.58442 6.85714 5.37662C6.46753 5.19481 6.02597 5.09091 5.53247 5.09091C4.96104 5.09091 4.54545 5.22078 4.25974 5.45455C3.97403 5.68831 3.81818 6.07792 3.81818 6.5974C3.81818 6.96104 3.97403 7.2987 4.28571 7.53247C4.5974 7.79221 4.96104 8.02597 5.42857 8.25974C5.8961 8.49351 6.38961 8.72727 6.90909 8.98701C7.42857 9.24675 7.92208 9.53247 8.38961 9.8961C8.85714 10.2597 9.22078 10.6753 9.53247 11.1948C9.84416 11.7143 10 12.3377 10 13.0649C10 14.1818 9.68831 15.1429 9.09091 15.9481C8.49351 16.7532 7.55844 17.2727 6.36364 17.5584V20H4.1039V17.6623C3.42857 17.5844 2.7013 17.4026 1.94805 17.0909C1.19481 16.7792 0.545455 16.3896 0 15.8961L1.50649 13.5844C2.1039 14.026 2.67532 14.3636 3.19481 14.5974C3.74026 14.8312 4.28571 14.9351 4.83117 14.9351C5.48052 14.9351 5.97403 14.8052 6.25974 14.5455C6.57143 14.2857 6.72727 13.8701 6.72727 13.3247C6.72727 12.9091 6.57143 12.5714 6.25974 12.2857C5.94805 12 5.58442 11.7403 5.11688 11.4805C4.64935 11.2208 4.15584 10.961 3.63636 10.7013C3.11688 10.4416 2.62338 10.1299 2.15584 9.76623C1.68831 9.4026 1.32468 8.98701 1.01299 8.49351C0.701299 8 0.545455 7.42857 0.545455 6.72727C0.545455 5.58442 0.857143 4.62338 1.48052 3.87013C2.1039 3.11688 2.98701 2.62338 4.07792 2.41558V0H6.33766V2.36364C7.09091 2.46753 7.74026 2.7013 8.31169 3.03896C8.88312 3.37662 9.37662 3.79221 9.84416 4.28571L8.07792 6.25974Z' fill='%234B9200'/%3E%3C/svg%3E%0A");
+    border: 1px solid rgb(181, 159, 91);
 }
 
 .donate__input:focus::placeholder {
@@ -338,7 +291,7 @@
 
 .donate__radio-menu {
     display: flex;
-    max-width: 213px;
+    max-width: 207px;
     width: 100%;
     justify-content: flex-start;
     align-items: center;
@@ -350,12 +303,13 @@
 }
 
 .donate__radio-menu input {
-    margin: 0px 11px 3px 0;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #FE9013;
+    width: 10px;
+    height: 10px;
+    margin: 0px 13px 3px 0;
+    outline: 1px solid #FE9013;
+    outline-offset: 2px;
+    border-color: transparent;
     border-radius: 50%;
-    background-color: transparent;
     transition: 0.2s all ease-in-out;
     cursor: pointer;
     -webkit-appearance: none;
@@ -368,12 +322,13 @@
 }
 
 .donate__radio-menu label:first-of-type {
-    margin-right: 50px;
+    margin-right: 54px;
 }
 
 .donate__radio-menu input:checked {
-    border-color: #4B9200;
-    background: #4B9200;
+    border: 1px solid #FE9013;
+    border-radius: 50%;
+    background: #FE9013;
     cursor: pointer;
 }
 
