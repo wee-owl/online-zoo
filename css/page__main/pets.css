@@ -35,7 +35,8 @@
 
 .pets__container {
     position: relative;
-    margin-top: 178px;
+    margin-top: 177px;
+    z-index: 1;
 }
 
 .pets__slider {

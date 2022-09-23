@@ -19,7 +19,11 @@
 }
 
 .backstage__container {
+    position: relative;
     margin-top: 140px;
+    background-color: #ffffff78;
+    box-shadow: 15px 0px 15px 15px rgb(255 255 255 / 50%);
+    backdrop-filter: blur(1px);
 }
 
 .backstage__content {
@@ -27,6 +31,10 @@
     justify-content: space-between;
     gap: 10px;
     align-items: flex-start;
+}
+
+.backstage__image {
+    overflow: hidden;
 }
 
 .backstage__img {
