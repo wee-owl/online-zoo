@@ -40,8 +40,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 31px;
-    padding-bottom: 21px;
     gap: 29px;
     overflow: hidden;
 }
