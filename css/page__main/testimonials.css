@@ -37,11 +37,17 @@
 }
 
 .testimonials__feeds {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    max-height: 393px;
+    justify-content: flex-start; /* center */
     align-items: center;
     gap: 29px;
+    /* flex-wrap: wrap; */
     overflow: hidden;
+    z-index: 1;
+
+    transition: all 0.5s ease-in-out;
 }
 
 .testimonials__range {
@@ -56,12 +62,13 @@
     border: 0.5px solid transparent;
     background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 5px;
+    z-index: 1;
 }
 
 .testimonials__range::-webkit-slider-thumb {
     -webkit-appearance: none;
     position: relative;
-    width: 115px;
+    width: 75px;
     height: 6px;
     top: -1px;
     left: -1px;
@@ -109,10 +116,14 @@
     background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 20px;
     padding: 2px;
+
+    min-width: 268px;
+    transition: all 0.5s ease-in-out;
 }
 
 .testimonials__block-content {
-    width: 264px;
+    max-width: 264px;
+    width: 100%;
     max-height: 391px;
     padding: 13px 14px 20px 15px;
     background: #F1F3F2;
@@ -209,4 +220,212 @@
 
 .testimonials__button:active {
     background: #4B9200;
+}
+
+@media (max-width: 1000px) {
+
+    .testimonials::after {
+        width: 196px;
+        background-image: url('../../assets/images/leaf_1000.png');
+        transform: translateY(125px);
+    }
+
+    .testimonials__container {
+        padding-top: 101px;
+        padding-bottom: 140px;
+    }
+
+    .testimonials__title {
+        margin-bottom: 30px;
+    }
+
+    .testimonials__feeds {
+        max-height: 390px;
+        gap: 27px;
+    }
+
+    .testimonials__block {
+        min-width: 295px;
+    }
+
+    .testimonials__block-content {
+        max-width: 291px;
+        max-height: 385px;
+        padding: 12px 20px 37px 13px;
+    }
+
+    .testimonials__range {
+        width: 390px;
+        margin: 20px auto 52px;
+    }
+
+    .testimonials__range::-webkit-slider-thumb {
+        width: 75px;
+    }
+
+    .testimonials__range::-moz-range-thumb {
+        width: 75px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .testimonials {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .testimonials::after {
+        width: 116px;
+        background-image: url('../../assets/images/leaf_640.png');
+        transform: translateY(169px);
+    }
+
+    .testimonials__container {
+        padding-top: 60px;
+        padding-bottom: 6px;
+    }
+
+    .testimonials__feeds {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: 362px;
+        gap: 15px;
+
+        overflow-y: auto;
+    }
+
+
+
+    .testimonials__feeds::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    
+    .testimonials__feeds::-webkit-scrollbar-button:start:decrement,
+    .testimonials__feeds::-webkit-scrollbar-button:end:increment  {
+        height: 0;
+        background-color: transparent;
+    }
+    
+    .testimonials__feeds::-webkit-scrollbar-track-piece  {
+        background-color: transparent;
+    }
+    
+    .testimonials__feeds::-webkit-scrollbar-thumb:vertical {
+        height: 0;
+        background-color: transparent;
+    }
+
+
+    
+    .testimonials__block {
+        cursor: pointer;
+    }
+
+    .testimonials__block-content {
+        max-width: 100%;
+        max-height: 105px;
+        padding: 13px 17px 10px 10px;
+    }
+
+    .testimonials__block-feedback {
+        -webkit-line-clamp: 2;
+        margin-left: 6px;
+    }
+
+    .testimonials__range {
+        display: none;
+    }
+
+    .testimonials__button {
+        max-width: 240px;
+        margin: 40px auto 74px;
+    }
+
+    .modal__bg {
+        position: fixed;
+        inset: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        will-change: transform;
+        overflow-y: auto;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .modal__bg-active {
+        display: flex;
+    }
+
+    .popup__block {
+        position: relative;
+        max-width: 320px;
+        margin: auto;
+        padding: 20px 36px 17px 17px;
+        cursor: default;
+    }
+
+    .modal__close {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        z-index: 15;
+    }
+
+    .popup {
+        background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+        border-radius: 20px;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .testimonials {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .testimonials::after {
+        width: 51px;
+        background-image: url('../../assets/images/leaf_320.png');
+        transform: translateY(185px);
+    }
+
+    .testimonials__container {
+        padding-top: 30px;
+
+
+        padding-bottom: 5px;
+    }
+
+    .testimonials__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 29px; 
+    }
+
+    .testimonials__block-content {
+        padding: 8px 5px 14px 11px;
+    }
+
+    .testimonials__block-person {
+        margin-left: -4px;
+    }
+
+    .testimonials__block-location::after {
+        margin-right: 5px;
+        margin-left: 6px;
+    }
+
+    .testimonials__button {
+        margin: 30px auto 55px;
+    }
 }

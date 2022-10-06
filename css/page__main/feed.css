@@ -5,13 +5,12 @@
 
 .feed__container {
     background: rgba(253, 253, 255, 0.52);
-    backdrop-filter: blur(2px);
     border-radius: 20px;
 }
 
 .feed__content {
     margin: 0 auto;
-    padding: 41px 0 59px;
+    padding: 40px 0 61px;
     text-align: center;
 }
 
@@ -71,28 +70,23 @@
 }
 
 .feed__works-container {
+    position: relative;
     display: flex;
-    /*max-width: 764px;*/
-    margin: 0 198px 60px;
+    max-width: 764px;
+    margin: 0 auto 60px;
     justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.feed__works-container > svg {
-    margin-top: 62px;
+    gap: 5px;
 }
 
 .feed__block {
     width: 168px;
-    height: 244px;
 }
 
 .feed__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
+    max-width: 168px;
     height: 168px;
     margin-bottom: 30px;
     border: 1px solid #F9804B;
@@ -106,6 +100,15 @@
     line-height: 22px;
     text-align: left;
     color: #333B41;
+}
+
+.feed__arrows {
+    margin-top: 60px;
+}
+
+.feed__arrow1, 
+.feed__arrow2 {
+    max-width: 100%;
 }
 
 .feed__button {
@@ -130,4 +133,170 @@
 
 .feed__button:active {
     background: #4B9200;
+}
+
+@media (max-width: 1000px) {
+
+    .feed {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .feed__content {
+        padding: 30px 48px 51px 49px;
+    }
+
+    .feed__title {
+        margin-bottom: 20px;
+    }
+
+    .feed__paragraph1 {
+        margin: 0 0 20px;
+    }
+
+    .feed__paragraph2 {
+        margin: 0 0 10px;
+    }
+
+    .feed__paragraph3 {
+        margin: 0 0 40px;
+    }
+
+    .feed__works-container {
+        margin: 0 auto 72px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .feed__arrow1 {
+        position: absolute;
+        margin-top: 0;
+        transform: translate(-43px, -76px);
+    }
+
+    .feed__arrow2 {
+        position: absolute;
+        margin-top: 0;
+        transform: translate(-44px, -77px);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .feed {
+        padding: 19px 0 20px;
+    }
+
+    .feed__content {
+        padding: 10px 20px 61px;
+    }
+
+    .feed__title {
+        margin-bottom: 21px;
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .feed__paragraph1 {
+        margin-bottom: 19px;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .feed__link {
+        padding-bottom: 0;
+    }
+
+    .feed__paragraph3 {
+        margin-bottom: 30px;
+    }
+
+    .feed__subtitle {
+        margin-bottom: 19px;
+    }
+
+    .feed__works-container {
+        justify-content: flex-start;
+        gap: 21px;
+        margin-bottom: 42px;
+    }
+
+    .feed__arrow1 {
+        transform: translate(-52px, -76px);
+    }
+
+    .feed__arrow2 {
+        transform: translate(-54px, -77px);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .feed {
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .feed__content {
+        padding: 20px 0 40px;
+    }
+
+    .feed__title {
+        margin-bottom: 10px;
+        font-size: 24px; /* 33px */
+        line-height: 29px; /* 40px */
+    }
+
+    .feed__paragraph1 {
+        margin-right: 2px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .feed__paragraph2, 
+    .feed__paragraph3 {
+        display: none;
+    }
+
+    .feed__subtitle {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .feed__works-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 21px;
+        margin-bottom: 39px;
+    }
+
+    .feed__icon {
+        margin-bottom: 11px;
+    }
+
+    .feed__arrows {
+        position: relative;
+        width: 90px;
+        margin-top: 0;
+    }
+
+    .feed__arrow1 {
+        transform: rotate(84deg);
+        top: -30px;
+        right: -100px;
+    }
+
+    .feed__arrow2 {
+        transform: rotate(84deg);
+        top: -45px;
+        right: -100px;
+    }
+
+    .feed__works-container .feed__block:last-of-type {
+        margin-top: -15px;
+    }
 }

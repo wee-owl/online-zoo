@@ -16,14 +16,15 @@
     background-position: right;
     background-repeat: no-repeat;
     transform: translateY(-128px);
+    z-index: 1;
 }
 
 .backstage__container {
     position: relative;
     margin-top: 140px;
-    background-color: #ffffff78;
-    box-shadow: 15px 0px 15px 15px rgb(255 255 255 / 50%);
-    backdrop-filter: blur(1px);
+    background-color: rgb(255 255 255 / 60%);
+    box-shadow: 15px 0px 15px 15px rgb(255 255 255 / 60%);
+    z-index: 2;
 }
 
 .backstage__content {
@@ -75,4 +76,116 @@
     font-size: 16px;
     line-height: 22px;
     color: #333B41;
+}
+
+@media (max-width: 1000px) {
+
+    .backstage::before {
+        display: none;
+    }
+
+    .backstage__container {
+        margin-top: 108px;
+    }
+
+    .backstage__article {
+        max-width: 454px;
+    }
+
+    .backstage__title {
+        margin-top: -9px;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .backstage {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .backstage__container {
+        max-width: 495px;
+        margin: 68px auto auto 0;
+    }
+
+    .backstage__image {
+        display: none;
+    }
+
+    .backstage::before {
+        display: block;
+        width: 231px;
+        height: 484px;
+        background-image: url('../../assets/images/flower_640.png');
+        transform: translateY(-73px);
+    }
+
+    .backstage__article {
+        max-width: 100%;
+    }
+
+    .backstage__title {
+        margin-left: 4px;
+    }
+
+    .backstage__title-text {
+        margin-bottom: 31px;
+    }
+
+    .backstage__subtitle {
+        margin-bottom: 20px;
+        margin-left: 4px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .backstage__container {
+        margin-top: 90px;
+    }
+
+    .backstage__title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 428px) {
+
+    .backstage {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .backstage::before {
+        width: 105px;
+        height: 225px;
+        background-image: url('../../assets/images/flower_320.png');
+        transform: translateY(-66px);
+    }
+
+    .backstage__container {
+        margin-top: 104px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .backstage__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .backstage__title-text {
+        margin-bottom: 20px;
+        margin-left: 2px;
+    }
+
+    .backstage__subtitle {
+        margin-bottom: 10px;
+        margin-left: 2px;
+    }
 }

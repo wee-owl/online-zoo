@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     background-color: #111115;
     padding: 40px 30px 50px;
 }
@@ -139,6 +140,10 @@
     background: #4B9200;
 }
 
+.footer__social-icon {
+    display: none;
+}
+
 .footer__social-nav {
     display: flex;
     justify-content: space-between;
@@ -228,4 +233,138 @@
 .footer__copyright:active {
     color: #4B9200;
     text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+
+    .footer {
+        padding: 40px 0 50px 31px;
+    }
+
+    .footer__logo-sub {
+        margin-right: 63px;
+    }
+
+    .footer__social-icon {
+        display: none;
+    }
+
+    .footer__social-nav {
+        justify-content: flex-start;
+    }
+
+    .footer__nav {
+        max-width: 474px;
+    }
+
+    .footer__list {
+        gap: 10px 48px;
+    }
+
+    .footer__copyright {
+        margin-left: 23px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 12px 20px;
+    }
+
+    .footer__sub {
+        display: none;
+    }
+
+    .footer__logo-sub {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .footer__social-nav {
+        margin-top: 67px;
+        gap: 70px;
+    }
+
+    .footer__social {
+        display: none;
+    }
+
+    .footer__social-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer__button-donate {
+        margin-top: -79px;
+    }
+
+    .footer__nav {
+        justify-content: space-between;
+        max-width: 300px;
+    }
+
+    .footer__list {
+        gap: 10px 37px;
+    }
+
+    .footer__copyright {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .footer {
+        padding: 18px 10px 20px;
+    }
+
+    .footer__logo-sub {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer__social-icon {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer__button-donate {
+        margin: 30px auto 29px;
+    }
+
+    .footer__social-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    .footer__nav {
+        order: 1;
+    }
+
+    .footer__list {
+        justify-content: space-around;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .footer__copyright {
+        order: 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .footer__copyright {
+        align-self: flex-end;
+    }
 }

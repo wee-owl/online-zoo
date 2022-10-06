@@ -11,7 +11,7 @@
     <link rel="preload" href="assets/fonts/Roboto-regular-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/Roboto-light-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/page__main.css">
-    <!--<script src="." type="module"></script>-->
+    <script src="js/main.js" type="module"></script>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <nav class="header__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#page__main" class="nav__link nav__link_active">About</a>
+                        <a class="nav__link nav__link_active">About</a>
                     </li>
                     <li class="nav__item">
                         <a href="#map" class="nav__link">Map</a>
@@ -40,6 +40,35 @@
                 </ul>
             </nav>
             <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="header__design" target="_blank">Designed by ©</a>
+            
+            <button class="burger__button">
+                <span class="burger__strip"></span>
+            </button>
+
+            <div class="burger__nav">
+                <a href="#page__main" class="burger__logo">
+                    <h1 class="burger__title">PetStory online</h1>
+                </a>
+                <ul class="burger__list">
+                    <li class="burger__item">
+                        <a class="burger__link burger__link_active">About</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#map" class="burger__link">Map</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#zoos" class="burger__link">Zoos</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="pages/donate.html" class="burger__link">Donate</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#contact" class="burger__link">Contact us</a>
+                    </li>
+                </ul>
+                <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="burger__design" target="_blank">Designed by ©</a>
+            </div>
+
         </div>
     </header>
 
@@ -51,7 +80,7 @@
                     <h2 class="hero__title">
                         Watch your <span class="hero__title-highlight">favorite</span> animal online
                     </h2>
-                    <a href="#0" class="hero__button">wath online</a>
+                    <a href="#0" class="hero__button">watch online</a>
                 </div>
             </div>
         </section>
@@ -60,7 +89,11 @@
             <div class="container backstage__container">
                 <div class="backstage__content">
                     <div class="backstage__image">
-                        <img src="assets/images/backstage_man.png" class="backstage__img" alt="The man in the Non-la hat">
+                        <picture>
+                            <source media="(min-width: 1001px)" srcset="assets/images/backstage_man.png">
+                            <source media="(max-width: 1000px)" srcset="assets/images/backstage_man_small.png">
+                            <img src="assets/images/backstage_man.png" class="backstage__img" alt="The man in the Non-la hat">
+                        </picture>
                     </div>
                     <div class="backstage__article">
                         <h2 class="backstage__title">
@@ -90,7 +123,26 @@
                         </svg>
                     </button>
                     <div class="pets__content">
-                        <div class="pets__card">
+                        <div class="pets__card" id="card1">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/penguins4.png" class="pets__photo" alt="The photo shows a penguin">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Penguins</p>
+                                        <p class="pets__habitat">Native to Antarctica</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Penguins</p>
+                                    <p>Native to Antarctica</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card2">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/giant_pandas.png" class="pets__photo" alt="The photo shows a giant panda">
@@ -109,7 +161,7 @@
                             </div>
                         </div>
 
-                        <div class="pets__card">
+                        <div class="pets__card" id="card3">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/eagles.png" class="pets__photo" alt="The photo shows an eagle">
@@ -128,7 +180,7 @@
                             </div>
                         </div>
 
-                        <div class="pets__card">
+                        <div class="pets__card" id="card4">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/gorillas.png" class="pets__photo" alt="The photo shows a gorilla">
@@ -147,7 +199,26 @@
                             </div>
                         </div>
 
-                        <div class="pets__card">
+                        <div class="pets__card" id="card5">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/alligators3.png" class="pets__photo" alt="The photo shows an alligator">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Alligators</p>
+                                        <p class="pets__habitat">Native to Southeastern U. S.</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Alligators</p>
+                                    <p>Native to Southeastern U. S.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card6">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/two-toed_sloth.png" class="pets__photo" alt="The photo shows a two-toed sloth">
@@ -165,8 +236,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="pets__card">
+<!--
+                        <div class="pets__card" id="card7">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/cheetahs.png" class="pets__photo" alt="The photo shows a cheetah">
@@ -185,7 +256,26 @@
                             </div>
                         </div>
 
-                        <div class="pets__card">
+                        <div class="pets__card" id="card8">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/giant_pandas2.png" class="pets__photo" alt="The photo shows a giant panda">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">giant Pandas</p>
+                                        <p class="pets__habitat">Native to Southwest China</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>giant Pandas</p>
+                                    <p>Native to Southwest China</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card9">
                             <div class="pets__block pets__block-hover">
                                 <div class="pets__photo-block">
                                     <img src="assets/images/penguins.png" class="pets__photo" alt="The photo shows a penguin">
@@ -203,6 +293,406 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="pets__card" id="card10">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/alligators.png" class="pets__photo" alt="The photo shows an alligator">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Alligators</p>
+                                        <p class="pets__habitat">Native to Southeastern U. S.</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Alligators</p>
+                                    <p>Native to Southeastern U. S.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card11">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/gorillas2.png" class="pets__photo" alt="The photo shows a gorilla">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Gorillas</p>
+                                        <p class="pets__habitat">Native to Congo</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Gorillas</p>
+                                    <p>Native to Congo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card12">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/eagles2.png" class="pets__photo" alt="The photo shows an eagle">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Eagles</p>
+                                        <p class="pets__habitat">Native to South America</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Eagles</p>
+                                    <p>Native to South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card13">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/giant_pandas3.png" class="pets__photo" alt="The photo shows a giant panda">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">giant Pandas</p>
+                                        <p class="pets__habitat">Native to Southwest China</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>giant Pandas</p>
+                                    <p>Native to Southwest China</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card14">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/eagles3.png" class="pets__photo" alt="The photo shows an eagle">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Eagles</p>
+                                        <p class="pets__habitat">Native to South America</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Eagles</p>
+                                    <p>Native to South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card15">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/gorillas3.png" class="pets__photo" alt="The photo shows a gorilla">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Gorillas</p>
+                                        <p class="pets__habitat">Native to Congo</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Gorillas</p>
+                                    <p>Native to Congo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card16">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/two-toed_sloth2.png" class="pets__photo" alt="The photo shows a two-toed sloth">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Two-toed Sloth</p>
+                                        <p class="pets__habitat">Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Two-toed Sloth</p>
+                                    <p>Mesoamerica, South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card17">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/cheetahs2.png" class="pets__photo" alt="The photo shows a cheetah">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">cheetahs</p>
+                                        <p class="pets__habitat">Native to Africa</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>cheetahs</p>
+                                    <p>Native to Africa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card18">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/penguins2.png" class="pets__photo" alt="The photo shows a penguin">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Penguins</p>
+                                        <p class="pets__habitat">Native to Antarctica</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Penguins</p>
+                                    <p>Native to Antarctica</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card19">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/giant_pandas5.png" class="pets__photo" alt="The photo shows a giant panda">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">giant Pandas</p>
+                                        <p class="pets__habitat">Native to Southwest China</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>giant Pandas</p>
+                                    <p>Native to Southwest China</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card20">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/alligators2.png" class="pets__photo" alt="The photo shows an alligator">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Alligators</p>
+                                        <p class="pets__habitat">Native to Southeastern U. S.</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Alligators</p>
+                                    <p>Native to Southeastern U. S.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card21">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/gorillas4.png" class="pets__photo" alt="The photo shows a gorilla">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Gorillas</p>
+                                        <p class="pets__habitat">Native to Congo</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Gorillas</p>
+                                    <p>Native to Congo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card22">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/eagles4.png" class="pets__photo" alt="The photo shows an eagle">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Eagles</p>
+                                        <p class="pets__habitat">Native to South America</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Eagles</p>
+                                    <p>Native to South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card23">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/two-toed_sloth4.png" class="pets__photo" alt="The photo shows a two-toed sloth">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Two-toed Sloth</p>
+                                        <p class="pets__habitat">Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Two-toed Sloth</p>
+                                    <p>Mesoamerica, South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card24">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/cheetahs4.png" class="pets__photo" alt="The photo shows a cheetah">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">cheetahs</p>
+                                        <p class="pets__habitat">Native to Africa</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>cheetahs</p>
+                                    <p>Native to Africa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card25">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/giant_pandas4.png" class="pets__photo" alt="The photo shows a giant panda">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">giant Pandas</p>
+                                        <p class="pets__habitat">Native to Southwest China</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>giant Pandas</p>
+                                    <p>Native to Southwest China</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card26">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/alligators4.png" class="pets__photo" alt="The photo shows an alligator">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Alligators</p>
+                                        <p class="pets__habitat">Native to Southeastern U. S.</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Alligators</p>
+                                    <p>Native to Southeastern U. S.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card27">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/gorillas5.png" class="pets__photo" alt="The photo shows a gorilla">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Gorillas</p>
+                                        <p class="pets__habitat">Native to Congo</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Gorillas</p>
+                                    <p>Native to Congo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card28">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/two-toed_sloth3.png" class="pets__photo" alt="The photo shows a two-toed sloth">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Two-toed Sloth</p>
+                                        <p class="pets__habitat">Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="assets/icons/herbivorous.svg" class="pets__icon" alt="An icon indicating that the animal is a herbivore">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Two-toed Sloth</p>
+                                    <p>Mesoamerica, South America</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card29">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/cheetahs3.png" class="pets__photo" alt="The photo shows a cheetah">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">cheetahs</p>
+                                        <p class="pets__habitat">Native to Africa</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>cheetahs</p>
+                                    <p>Native to Africa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pets__card" id="card30">
+                            <div class="pets__block pets__block-hover">
+                                <div class="pets__photo-block">
+                                    <img src="assets/images/penguins3.png" class="pets__photo" alt="The photo shows a penguin">
+                                </div>
+                                <div class="pets__feature">
+                                    <div class="pets__about">
+                                        <p class="pets__name">Penguins</p>
+                                        <p class="pets__habitat">Native to Antarctica</p>
+                                    </div>
+                                    <img src="assets/icons/predator.svg" class="pets__icon" alt="An icon indicating that the animal is a predator">
+                                </div>
+                                <div class="pets__about-hover">
+                                    <p>Penguins</p>
+                                    <p>Native to Antarctica</p>
+                                </div>
+                            </div>
+                        </div>
+-->
                     </div>
                     <button class="pets__arrowbutton arrow-right" type="button">
                         <svg width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,9 +721,15 @@
                             </div>
                             <p class="feed__works">Pay with card</p>
                         </div>
-                        <svg width="71" height="37" viewbox="0 0 71 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M54.5889 28.5172L54.5889 28.5173L54.5849 28.5199C51.5922 30.46 48.8213 32.0974 46.3482 33.3872C44.9641 34.1103 43.4417 34.8432 42.019 35.396C40.6041 35.9457 39.2594 36.3288 38.2409 36.3288C37.5766 36.3288 36.9877 36.1647 36.6402 35.7026L36.6401 35.7025C36.2886 35.2344 36.2989 34.6137 36.4913 33.9648C36.6855 33.31 37.0811 32.5679 37.5911 31.7949C38.6129 30.2461 40.1319 28.5167 41.563 27.0192C42.6307 25.9012 43.854 24.7009 45.2109 23.4388C40.8728 23.8237 36.0154 24.0263 31.0565 24.0263C23.7631 24.0263 16.2356 23.5724 10.5264 22.696C7.67394 22.2581 5.26225 21.7129 3.55796 21.0604C2.707 20.7346 2.01685 20.3763 1.53512 19.9804C1.05422 19.5851 0.75 19.125 0.75 18.5992C0.75 18.0734 1.05422 17.6133 1.53511 17.218C2.01684 16.822 2.70699 16.4637 3.55795 16.1379C5.26224 15.4853 7.67393 14.9399 10.5264 14.5019C16.2356 13.6252 23.7631 13.1711 31.0565 13.1711C36.2743 13.1711 41.3363 13.3922 45.8255 13.8131C43.9225 12.3721 42.2346 11.0082 40.792 9.74591L40.7919 9.74582C39.2339 8.38108 37.5677 6.79309 36.4127 5.34112C35.8362 4.61638 35.3765 3.91248 35.1251 3.27762C34.8759 2.64849 34.8107 2.03125 35.1195 1.53416L35.1195 1.53412C35.4285 1.0369 36.0108 0.821461 36.6855 0.765629C37.3662 0.709292 38.2011 0.809138 39.1064 1.00447C40.9201 1.3958 43.082 2.18545 44.9954 2.97789C47.5645 4.04095 50.4692 5.42656 53.6334 7.09707L53.6356 7.09823L56.0486 8.40248L56.0486 8.40238L56.0551 8.40614L59.5243 10.4177L59.5243 10.4177L59.5272 10.4194C62.8852 12.4264 66.341 14.5333 69.7988 16.6811L69.7988 16.6812L70.132 16.8882L70.4421 17.081L70.1502 17.3004L69.8374 17.5355C69.8374 17.5355 69.8374 17.5355 69.8373 17.5356C66.8302 19.8046 63.5762 22.209 60.1669 24.6848L60.1659 24.6856L58.7145 25.7281L58.7146 25.7282L58.7087 25.7322L54.5889 28.5172ZM45.8687 32.4668L45.8688 32.4668C48.3087 31.1934 51.0508 29.573 54.0178 27.65C54.0181 27.6498 54.0184 27.6497 54.0186 27.6495L56.2952 26.1447L59.5578 23.8441C59.5583 23.8437 59.5588 23.8434 59.5593 23.843C62.7347 21.5368 65.7755 19.2926 68.6066 17.1626C65.3696 15.1574 62.1393 13.1904 58.9967 11.3112C58.9966 11.3111 58.9965 11.311 58.9963 11.3109L56.7771 9.9979L53.1456 8.01323C53.1451 8.01295 53.1446 8.01267 53.144 8.01238C50.0083 6.35699 47.1333 4.98622 44.5983 3.93808L44.5982 3.93802C40.9158 2.41274 38.7744 1.89508 37.5378 1.796C36.2981 1.69666 36.0391 2.02033 36.0001 2.08216C35.9629 2.14279 35.7884 2.5173 36.4277 3.58436C37.0654 4.64888 38.4789 6.33922 41.4765 8.96401L41.4766 8.96408C43.2639 10.5304 45.4419 12.259 47.9486 14.1025L48.7567 14.6962L49.5088 15.2488L48.5812 15.1462L47.5839 15.0359C42.6939 14.4958 36.9786 14.2092 31.0565 14.2092C22.2376 14.2092 14.8727 14.8085 9.71777 15.6854C7.13848 16.1242 5.12299 16.6308 3.75795 17.1619C3.07407 17.428 2.56732 17.6951 2.23605 17.9536C1.89822 18.2173 1.78809 18.4354 1.78809 18.5992C1.78809 18.763 1.89822 18.9811 2.23605 19.2448C2.56731 19.5033 3.07406 19.7703 3.75794 20.0363C5.12298 20.5674 7.13847 21.0738 9.71775 21.5125C14.8727 22.3891 22.2376 22.9882 31.0565 22.9882C36.5797 22.9882 41.972 22.7362 46.6485 22.259L47.463 22.176L48.2189 22.099L47.6564 22.6098L47.05 23.1605L47.0498 23.1607C45.2477 24.7939 43.6547 26.3336 42.3133 27.7367C39.5606 30.6168 38.3029 32.426 37.7623 33.5431C37.2187 34.6667 37.4291 35.0231 37.4707 35.0784L37.4708 35.0785C37.5119 35.1333 37.7951 35.435 39.0251 35.2255C40.2481 35.0171 42.3358 34.3119 45.8687 32.4668Z" fill="#333B41" stroke="#333B41" stroke-width="0.5"/>
-                        </svg>
+
+                        <div class="feed__arrows">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="assets/icons/feed_arrows.svg">
+                                <source media="(max-width: 768px)" srcset="assets/icons/feed_arrows_green.svg">
+                                <img src="assets/icons/feed_arrows.svg" class="feed__arrow1" alt="Right arrow">
+                            </picture>
+                        </div>
+
                         <div class="feed__block">
                             <div class="feed__icon">
                                 <svg width="87" height="96" viewbox="0 0 87 96" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,9 +744,15 @@
                             </div>
                             <p class="feed__works">Payment goes to the zoo</p>
                         </div>
-                        <svg width="71" height="37" viewbox="0 0 71 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M54.5889 28.5172L54.5889 28.5173L54.5849 28.5199C51.5922 30.46 48.8213 32.0974 46.3482 33.3872C44.9641 34.1103 43.4417 34.8432 42.019 35.396C40.6041 35.9457 39.2594 36.3288 38.2409 36.3288C37.5766 36.3288 36.9877 36.1647 36.6402 35.7026L36.6401 35.7025C36.2886 35.2344 36.2989 34.6137 36.4913 33.9648C36.6855 33.31 37.0811 32.5679 37.5911 31.7949C38.6129 30.2461 40.1319 28.5167 41.563 27.0192C42.6307 25.9012 43.854 24.7009 45.2109 23.4388C40.8728 23.8237 36.0154 24.0263 31.0565 24.0263C23.7631 24.0263 16.2356 23.5724 10.5264 22.696C7.67394 22.2581 5.26225 21.7129 3.55796 21.0604C2.707 20.7346 2.01685 20.3763 1.53512 19.9804C1.05422 19.5851 0.75 19.125 0.75 18.5992C0.75 18.0734 1.05422 17.6133 1.53511 17.218C2.01684 16.822 2.70699 16.4637 3.55795 16.1379C5.26224 15.4853 7.67393 14.9399 10.5264 14.5019C16.2356 13.6252 23.7631 13.1711 31.0565 13.1711C36.2743 13.1711 41.3363 13.3922 45.8255 13.8131C43.9225 12.3721 42.2346 11.0082 40.792 9.74591L40.7919 9.74582C39.2339 8.38108 37.5677 6.79309 36.4127 5.34112C35.8362 4.61638 35.3765 3.91248 35.1251 3.27762C34.8759 2.64849 34.8107 2.03125 35.1195 1.53416L35.1195 1.53412C35.4285 1.0369 36.0108 0.821461 36.6855 0.765629C37.3662 0.709292 38.2011 0.809138 39.1064 1.00447C40.9201 1.3958 43.082 2.18545 44.9954 2.97789C47.5645 4.04095 50.4692 5.42656 53.6334 7.09707L53.6356 7.09823L56.0486 8.40248L56.0486 8.40238L56.0551 8.40614L59.5243 10.4177L59.5243 10.4177L59.5272 10.4194C62.8852 12.4264 66.341 14.5333 69.7988 16.6811L69.7988 16.6812L70.132 16.8882L70.4421 17.081L70.1502 17.3004L69.8374 17.5355C69.8374 17.5355 69.8374 17.5355 69.8373 17.5356C66.8302 19.8046 63.5762 22.209 60.1669 24.6848L60.1659 24.6856L58.7145 25.7281L58.7146 25.7282L58.7087 25.7322L54.5889 28.5172ZM45.8687 32.4668L45.8688 32.4668C48.3087 31.1934 51.0508 29.573 54.0178 27.65C54.0181 27.6498 54.0184 27.6497 54.0186 27.6495L56.2952 26.1447L59.5578 23.8441C59.5583 23.8437 59.5588 23.8434 59.5593 23.843C62.7347 21.5368 65.7755 19.2926 68.6066 17.1626C65.3696 15.1574 62.1393 13.1904 58.9967 11.3112C58.9966 11.3111 58.9965 11.311 58.9963 11.3109L56.7771 9.9979L53.1456 8.01323C53.1451 8.01295 53.1446 8.01267 53.144 8.01238C50.0083 6.35699 47.1333 4.98622 44.5983 3.93808L44.5982 3.93802C40.9158 2.41274 38.7744 1.89508 37.5378 1.796C36.2981 1.69666 36.0391 2.02033 36.0001 2.08216C35.9629 2.14279 35.7884 2.5173 36.4277 3.58436C37.0654 4.64888 38.4789 6.33922 41.4765 8.96401L41.4766 8.96408C43.2639 10.5304 45.4419 12.259 47.9486 14.1025L48.7567 14.6962L49.5088 15.2488L48.5812 15.1462L47.5839 15.0359C42.6939 14.4958 36.9786 14.2092 31.0565 14.2092C22.2376 14.2092 14.8727 14.8085 9.71777 15.6854C7.13848 16.1242 5.12299 16.6308 3.75795 17.1619C3.07407 17.428 2.56732 17.6951 2.23605 17.9536C1.89822 18.2173 1.78809 18.4354 1.78809 18.5992C1.78809 18.763 1.89822 18.9811 2.23605 19.2448C2.56731 19.5033 3.07406 19.7703 3.75794 20.0363C5.12298 20.5674 7.13847 21.0738 9.71775 21.5125C14.8727 22.3891 22.2376 22.9882 31.0565 22.9882C36.5797 22.9882 41.972 22.7362 46.6485 22.259L47.463 22.176L48.2189 22.099L47.6564 22.6098L47.05 23.1605L47.0498 23.1607C45.2477 24.7939 43.6547 26.3336 42.3133 27.7367C39.5606 30.6168 38.3029 32.426 37.7623 33.5431C37.2187 34.6667 37.4291 35.0231 37.4707 35.0784L37.4708 35.0785C37.5119 35.1333 37.7951 35.435 39.0251 35.2255C40.2481 35.0171 42.3358 34.3119 45.8687 32.4668Z" fill="#333B41" stroke="#333B41" stroke-width="0.5"/>
-                        </svg>
+
+                        <div class="feed__arrows">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="assets/icons/feed_arrows.svg">
+                                <source media="(max-width: 768px)" srcset="assets/icons/feed_arrows_green.svg">
+                                <img src="assets/icons/feed_arrows.svg" class="feed__arrow2" alt="Right arrow">
+                            </picture>
+                        </div>
+
                         <div class="feed__block">
                             <div class="feed__icon">
                                 <svg width="127" height="73" viewbox="0 0 127 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +777,8 @@
                 <div class="testimonials__content">
                     <h3 class="testimonials__title">Testimonials</h3>
                     <div class="testimonials__feeds">
-                            <div class="testimonials__block">
+
+                            <div class="testimonials__block" id="block1">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
                                         <img src="#0" class="testimonials__block-photo" alt="Author's photo">
@@ -294,7 +797,7 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block2">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
                                         <img src="assets/images/oskar_samborsky.png" class="testimonials__block-photo" alt="Author's photo">
@@ -313,7 +816,7 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block3">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
                                         <img src="assets/images/fredericka_michelin.png" class="testimonials__block-photo" alt="Author's photo">
@@ -333,7 +836,7 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block4">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
                                         <img src="assets/images/mila_riksha.png" class="testimonials__block-photo" alt="Author's photo">
@@ -351,11 +854,11 @@
                                     </div>
                                 </div>
                             </div>
-<!-- + 16 blocks-->
-                            <div class="testimonials__block">
+
+                            <div class="testimonials__block" id="block5">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="#0" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/michael_john.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
                                             <p class="testimonials__block-author">Michael John</p>
                                             <div class="testimonials__block-location-time">
@@ -371,12 +874,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block6">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="assets/images/oskar_samborsky.png" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon6.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Oskar Samborsky</p>
+                                            <p class="testimonials__block-author">George Ethan</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Yesterday</p>
@@ -390,12 +893,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block7">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="assets/images/fredericka_michelin.png" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon7.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Fredericka Michelin</p>
+                                            <p class="testimonials__block-author">Olivia Isla</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Yesterday</p>
@@ -410,12 +913,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block8">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="assets/images/mila_riksha.png" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon8.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Mila Riksha</p>
+                                            <p class="testimonials__block-author">Oliver Dexter</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Yesterday</p>
@@ -429,12 +932,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block9">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="#0" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon9.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Michael John</p>
+                                            <p class="testimonials__block-author">Stanley Connor</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Today</p>
@@ -448,12 +951,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block10">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="assets/images/oskar_samborsky.png" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon10.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Oskar Samborsky</p>
+                                            <p class="testimonials__block-author">Mia Ruby</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Yesterday</p>
@@ -467,12 +970,12 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
+                            <div class="testimonials__block" id="block11">
                                 <div class="testimonials__block-content">
                                     <div class="testimonials__block-header">
-                                        <img src="assets/images/fredericka_michelin.png" class="testimonials__block-photo" alt="Author's photo">
+                                        <img src="assets/images/icon11.png" class="testimonials__block-photo" alt="Author's photo">
                                         <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Fredericka Michelin</p>
+                                            <p class="testimonials__block-author">Isabelle Heidi</p>
                                             <div class="testimonials__block-location-time">
                                                 <p class="testimonials__block-location">Local Austria</p>
                                                 <p class="testimonials__block-time">Yesterday</p>
@@ -487,194 +990,81 @@
                                 </div>
                             </div>
 
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/mila_riksha.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Mila Riksha</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
+                            <div class="modal__bg" id="modal">
+                                <div class="popup__block">
+                                    <div class="modal__close">
+                                            <svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 14C0.744141 14 0.488281 13.9023 0.292969 13.707C-0.0976562 13.3164 -0.0976562 12.6836 0.292969 12.293L12.293 0.292969C12.6836 -0.0976562 13.3164 -0.0976562 13.707 0.292969C14.0977 0.683594 14.0977 1.31641 13.707 1.70703L1.70703 13.707C1.51172 13.9023 1.25586 14 1 14Z" fill="url(#paint0_linear_166_1069)"/>
+                                                <path d="M1 14C0.744141 14 0.488281 13.9023 0.292969 13.707C-0.0976562 13.3164 -0.0976562 12.6836 0.292969 12.293L12.293 0.292969C12.6836 -0.0976562 13.3164 -0.0976562 13.707 0.292969C14.0977 0.683594 14.0977 1.31641 13.707 1.70703L1.70703 13.707C1.51172 13.9023 1.25586 14 1 14Z" fill="url(#paint1_linear_166_1069)"/>
+                                                <path d="M1 14C0.744141 14 0.488281 13.9023 0.292969 13.707C-0.0976562 13.3164 -0.0976562 12.6836 0.292969 12.293L12.293 0.292969C12.6836 -0.0976562 13.3164 -0.0976562 13.707 0.292969C14.0977 0.683594 14.0977 1.31641 13.707 1.70703L1.70703 13.707C1.51172 13.9023 1.25586 14 1 14Z" fill="url(#paint2_linear_166_1069)"/>
+                                                <path d="M13 14C12.7441 14 12.4883 13.9023 12.293 13.707L0.292969 1.70703C-0.0976562 1.31641 -0.0976562 0.683594 0.292969 0.292969C0.683594 -0.0976562 1.31641 -0.0976562 1.70703 0.292969L13.707 12.293C14.0977 12.6836 14.0977 13.3164 13.707 13.707C13.5117 13.9023 13.2559 14 13 14Z" fill="url(#paint3_linear_166_1069)"/>
+                                                <path d="M13 14C12.7441 14 12.4883 13.9023 12.293 13.707L0.292969 1.70703C-0.0976562 1.31641 -0.0976562 0.683594 0.292969 0.292969C0.683594 -0.0976562 1.31641 -0.0976562 1.70703 0.292969L13.707 12.293C14.0977 12.6836 14.0977 13.3164 13.707 13.707C13.5117 13.9023 13.2559 14 13 14Z" fill="url(#paint4_linear_166_1069)"/>
+                                                <path d="M13 14C12.7441 14 12.4883 13.9023 12.293 13.707L0.292969 1.70703C-0.0976562 1.31641 -0.0976562 0.683594 0.292969 0.292969C0.683594 -0.0976562 1.31641 -0.0976562 1.70703 0.292969L13.707 12.293C14.0977 12.6836 14.0977 13.3164 13.707 13.707C13.5117 13.9023 13.2559 14 13 14Z" fill="url(#paint5_linear_166_1069)"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FEBDAB" stop-opacity="0.74"/>
+                                                <stop offset="0.225114" stop-color="#F3A9F8" stop-opacity="0.66"/>
+                                                <stop offset="0.45571" stop-color="#E0D8F0"/>
+                                                <stop offset="0.823271" stop-color="#EAF7FE"/>
+                                                <stop offset="0.991019" stop-color="#EAF7FE"/>
+                                                </linearGradient>
+                                                <linearGradient id="paint1_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FEBDAB" stop-opacity="0.74"/>
+                                                <stop offset="0.225114" stop-color="#F3A9F8" stop-opacity="0.66"/>
+                                                <stop offset="0.45571" stop-color="#E0D8F0"/>
+                                                <stop offset="0.823271" stop-color="#EAF7FE"/>
+                                                <stop offset="0.991019" stop-color="#EAF7FE"/>
+                                                </linearGradient>
+                                                <linearGradient id="paint2_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FED290" stop-opacity="0.7"/>
+                                                <stop offset="0.614306" stop-color="#FEBDAB"/>
+                                                <stop offset="0.65625" stop-color="#FED290" stop-opacity="0.7"/>
+                                                </linearGradient>
+                                                <linearGradient id="paint3_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FEBDAB" stop-opacity="0.74"/>
+                                                <stop offset="0.225114" stop-color="#F3A9F8" stop-opacity="0.66"/>
+                                                <stop offset="0.45571" stop-color="#E0D8F0"/>
+                                                <stop offset="0.823271" stop-color="#EAF7FE"/>
+                                                <stop offset="0.991019" stop-color="#EAF7FE"/>
+                                                </linearGradient>
+                                                <linearGradient id="paint4_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FEBDAB" stop-opacity="0.74"/>
+                                                <stop offset="0.225114" stop-color="#F3A9F8" stop-opacity="0.66"/>
+                                                <stop offset="0.45571" stop-color="#E0D8F0"/>
+                                                <stop offset="0.823271" stop-color="#EAF7FE"/>
+                                                <stop offset="0.991019" stop-color="#EAF7FE"/>
+                                                </linearGradient>
+                                                <linearGradient id="paint5_linear_166_1069" x1="6.4575" y1="15.3497" x2="-11.3639" y2="-2.94275" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.0647506" stop-color="#FED290" stop-opacity="0.7"/>
+                                                <stop offset="0.614306" stop-color="#FEBDAB"/>
+                                                <stop offset="0.65625" stop-color="#FED290" stop-opacity="0.7"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>                            
                                     </div>
-                                    <div class="testimonials__block-feedback">
-                                        My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="#0" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Michael John</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Today</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/oskar_samborsky.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Oskar Samborsky</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/fredericka_michelin.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Fredericka Michelin</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+                                    <div class="popup" id="popup">
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/mila_riksha.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Mila Riksha</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="#0" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Michael John</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Today</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/oskar_samborsky.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Oskar Samborsky</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/fredericka_michelin.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Fredericka Michelin</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonials__block">
-                                <div class="testimonials__block-content">
-                                    <div class="testimonials__block-header">
-                                        <img src="assets/images/mila_riksha.png" class="testimonials__block-photo" alt="Author's photo">
-                                        <div class="testimonials__block-person">
-                                            <p class="testimonials__block-author">Mila Riksha</p>
-                                            <div class="testimonials__block-location-time">
-                                                <p class="testimonials__block-location">Local Austria</p>
-                                                <p class="testimonials__block-time">Yesterday</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonials__block-feedback">
-                                        My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
-                                        The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    </div>
-                                </div>
-                            </div>
-
                     </div>
-                    <input type="range" class="testimonials__range" min="1" max="11" step="1" value="0">
-                    <button class="testimonials__button" type="button">leave feedback</button>
+                    <input type="range" class="testimonials__range" id="range" min="0" max="7" step="1" value="0">
+		            <button class="testimonials__button" type="button">leave feedback</button>
                 </div>
             </div>
+
         </section>
-
+        <div class="overlay"></div>
     </main>
-
     <footer class="footer" id="contact">
         <div class="container footer__container">
             <div class="footer__content">
                 <div class="footer__logo-sub">
                     <a href="#page__main" class="footer__logo">
-                        <img src="assets/icons/logo.svg" alt="Logo-link to the main page of the site">
+                        <picture>
+                            <source media="(min-width: 561px)" srcset="assets/icons/logo.svg">
+                            <source media="(max-width: 560px)" srcset="assets/icons/footer_logo_320.svg">
+                            <img src="assets/icons/logo.svg" class="footer__img" alt="Logo-link to the main page of the site">
+                        </picture>
                     </a>
                     <div class="footer__sub">
                         <p class="footer__sub-title">Subscribe to our news</p>
@@ -687,6 +1077,32 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+                    <div class="footer__social-icon">
+                        <a href="https://www.facebook.com/" class="footer__social-link" target="_blank">
+                            <svg width="26" height="26" viewbox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="currentColor" fill-opacity="0.5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17 7.75008H15.4C14.2983 7.75008 14.3334 8.14316 14.3334 8.8619V9.99991H17L16.4666 13H14.3334V21H10.6V13H9V9.99991H10.6V8.58692C10.6 6.33782 11.7974 5 14.6268 5H17V7.75008Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/" class="footer__social-link" target="_blank">
+                            <svg width="26" height="26" viewbox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="currentColor" fill-opacity="0.5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 7.65713C20.4114 7.93821 19.7787 8.12837 19.1147 8.21377C19.7923 7.77623 20.313 7.08372 20.5579 6.25827C19.9237 6.6633 19.2211 6.95752 18.4734 7.11604C17.8747 6.42906 17.0216 6 16.0774 6C14.2646 6 12.7949 7.58227 12.7949 9.53414C12.7949 9.81108 12.8238 10.0809 12.8798 10.3397C10.1517 10.1923 7.73296 8.7851 6.11392 6.6467C5.83136 7.16877 5.66944 7.77589 5.66944 8.42363C5.66944 9.64979 6.24896 10.7316 7.12976 11.3655C6.59168 11.347 6.08544 11.1882 5.64304 10.9235C5.64272 10.938 5.64272 10.9529 5.64272 10.9677C5.64272 12.6802 6.77424 14.1086 8.27584 14.4334C8.00048 14.5142 7.7104 14.5576 7.41104 14.5576C7.19952 14.5576 6.99392 14.5353 6.79344 14.4939C7.2112 15.898 8.42336 16.92 9.85984 16.9485C8.73648 17.8964 7.32096 18.4615 5.78304 18.4615C5.51808 18.4615 5.2568 18.4447 5 18.412C6.45264 19.4148 8.17824 20 10.0318 20C16.0698 20 19.3715 14.6144 19.3715 9.94401C19.3715 9.79068 19.3683 9.63821 19.3621 9.4866C20.0035 8.98839 20.56 8.36589 21 7.65713Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" class="footer__social-link" target="_blank">
+                            <svg width="26" height="26" viewbox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="currentColor" fill-opacity="0.5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70172 5.04829C8.8501 5.087 8.26863 5.22215 7.75974 5.42002C7.23357 5.62431 6.78768 5.89803 6.34294 6.34276C5.89791 6.78749 5.62447 7.23351 5.42017 7.75967C5.2223 8.26869 5.08701 8.85014 5.04829 9.7016C5.00929 10.5549 5 10.8272 5 13C5 15.1728 5.00929 15.4449 5.04829 16.2984C5.08701 17.1499 5.2223 17.7313 5.42017 18.24C5.62447 18.7662 5.89791 19.2125 6.34294 19.6571C6.78768 20.102 7.23357 20.3754 7.75974 20.58C8.26863 20.7779 8.8501 20.913 9.70172 20.9517C10.5551 20.9907 10.8274 21 13.0001 21C15.1729 21 15.4452 20.9907 16.2986 20.9517C17.15 20.913 17.7315 20.7779 18.2407 20.58C18.7664 20.3754 19.2127 20.102 19.6575 19.6571C20.1022 19.2125 20.3755 18.7662 20.5801 18.24C20.7778 17.7313 20.9133 17.1499 20.952 16.2984C20.991 15.4449 21 15.1728 21 13C21 10.8272 20.991 10.5549 20.952 9.7016C20.9133 8.85014 20.7778 8.26869 20.5801 7.75967C20.3755 7.23351 20.1022 6.78749 19.6575 6.34276C19.2127 5.89803 18.7664 5.62431 18.2407 5.42002C17.7315 5.22215 17.15 5.087 16.2986 5.04829C15.4452 5.00943 15.1729 5 13.0001 5C10.8274 5 10.5551 5.00943 9.70172 5.04829ZM9.76747 19.5116C8.98742 19.4761 8.56382 19.3461 8.28209 19.2364C7.9085 19.091 7.6422 18.9177 7.36218 18.6378C7.08216 18.358 6.90886 18.0915 6.76357 17.7181C6.65399 17.4362 6.52384 17.0126 6.48812 16.2326C6.44969 15.389 6.44141 15.1359 6.44141 12.9999C6.44141 10.8637 6.44969 10.6108 6.48812 9.76709C6.52384 8.9872 6.65399 8.56362 6.76357 8.28175C6.90886 7.90831 7.08216 7.64173 7.36218 7.36186C7.6422 7.08199 7.9085 6.90841 8.28209 6.76355C8.56382 6.65398 8.98742 6.52369 9.76747 6.48797C10.611 6.44954 10.8641 6.4414 13.0001 6.4414C15.1361 6.4414 15.3891 6.44954 16.233 6.48797C17.0128 6.52369 17.4364 6.65398 17.7184 6.76355C18.0918 6.90841 18.3583 7.08199 18.6382 7.36186C18.9182 7.64173 19.0913 7.90831 19.2366 8.28175C19.3462 8.56362 19.4765 8.9872 19.5122 9.76709C19.5507 10.6108 19.5585 10.8637 19.5585 12.9999C19.5585 15.1359 19.5507 15.389 19.5122 16.2326C19.4765 17.0126 19.3462 17.4362 19.2366 17.7181C19.0913 18.0915 18.9182 18.358 18.6382 18.6378C18.3583 18.9177 18.0918 19.091 17.7184 19.2364C17.4364 19.3461 17.0128 19.4761 16.233 19.5116C15.3894 19.5503 15.1364 19.5583 13.0001 19.5583C10.8641 19.5583 10.611 19.5503 9.76747 19.5116ZM16.3105 8.72943C16.3105 9.25945 16.7403 9.68947 17.2706 9.68947C17.8008 9.68947 18.2305 9.25945 18.2305 8.72943C18.2305 8.19913 17.8008 7.76954 17.2706 7.76954C16.7403 7.76954 16.3105 8.19913 16.3105 8.72943ZM8.8916 13.0002C8.8916 15.2691 10.731 17.1082 12.9999 17.1082C15.2689 17.1082 17.108 15.2691 17.108 13.0002C17.108 10.7312 15.2689 8.89203 12.9999 8.89203C10.731 8.89203 8.8916 10.7312 8.8916 13.0002ZM10.334 13.0001C10.334 11.5273 11.5278 10.3334 13.0006 10.3334C14.4734 10.3334 15.6673 11.5273 15.6673 13.0001C15.6673 14.473 14.4734 15.6668 13.0006 15.6668C11.5278 15.6668 10.334 14.473 10.334 13.0001Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/" class="footer__social-link" target="_blank">
+                            <svg width="26" height="26" viewbox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="13" cy="13" r="13" fill="currentColor" fill-opacity="0.5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0062 11.7728L11.4938 9.51719C11.4938 9.51719 10.2404 8.94726 10.2404 10.0186V15.031C10.2404 15.031 10.2636 15.7955 11.4938 15.2815C12.3498 14.9237 16.0062 13.0258 16.0062 13.0258C16.0062 13.0258 16.9391 12.4282 16.0062 11.7728ZM21.5213 16.7852C20.9624 18.3749 19.7669 18.5797 18.7637 18.7901C17.2852 19.1002 7.77237 19.0612 6.22922 18.5394C5.26706 18.2141 4.67503 18.0741 4.22386 15.7827C3.93499 14.3165 3.91592 10.003 4.22386 8.51494C4.52204 7.07408 5.27096 6.39753 6.73067 6.25928C10.6515 5.88785 17.205 5.94029 19.265 6.25928C21.1748 6.55486 21.5739 7.69385 21.772 8.76545C22.0927 10.5004 22.1304 15.0524 21.5213 16.7852Z" fill="white"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <a href="pages/donate.html" class="footer__button-donate">donate for volunteers</a>
@@ -724,7 +1140,7 @@
                     <div class="footer__nav">
                         <ul class="footer__list">
                             <li class="footer__item">
-                                <a href="#page__main" class="footer__link footer__link_active">About</a>
+                                <a class="footer__link footer__link_active">About</a>
                             </li>
                             <li class="footer__item">
                                 <a href="#map" class="footer__link">Map</a>
