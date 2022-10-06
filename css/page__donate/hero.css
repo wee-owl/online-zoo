@@ -11,3 +11,41 @@
 .hero__container {
     height: 386px;
 }
+
+@media (max-width: 1000px) {
+
+    .hero {
+        background-image: url('../../assets/images/hero_bg_donate1000.png');
+    }
+
+    .hero__container {
+        height: 391px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .hero {
+        background-image: url('../../assets/images/hero_bg_donate640.png');
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero__container {
+        height: 335px;
+        margin-top: 34px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .hero {
+        background-image: url('../../assets/images/hero_bg_donate320.png');
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero__container {
+        height: 187px;
+    }
+}
