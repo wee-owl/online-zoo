@@ -1,14 +1,13 @@
-// Create modal window
+// Create testimonials slider
 
 
 const range = document.querySelector('.testimonials__range');
 const mediaDesktop = window.matchMedia("(min-width: 1001px)");
 const mediaSmall = window.matchMedia("(max-width: 1000px)");
-const mediaTablet = window.matchMedia("(max-width: 640px)");
 var feedsContainer = Array.from(document.querySelector('.testimonials__feeds').children);
-feedsContainer.length = feedsContainer.length - 1;
 var rangeValue = range.value;
 var maxValue = Number(range.max);
+
 
 function changeSizeDesktop(e) {
     if (e.matches) {
@@ -46,13 +45,3 @@ function changeSizeSmall(e) {
 };
 changeSizeSmall(mediaSmall);
 mediaSmall.addEventListener("change", changeSizeSmall);
-
-/*
-function changeSizeTablet(e) {
-    if (e.matches) {
-
-    };
-};
-changeSizeTablet(mediaTablet);
-mediaTablet.addEventListener("change", changeSizeTablet);
-*/
