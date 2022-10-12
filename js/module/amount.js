@@ -25,12 +25,18 @@ const amountAnimals = document.querySelectorAll('.amount__animal');
 donateForm.value = '100';
 
 donateSumItems.forEach((item, i) => {
-    donateSumItems[5].classList.add('donate__item-active');
-    donateCircles[5].classList.add('donate__circle-active');
-    amountAnimals[5].classList.add('amount__animal-active');
+    donateCircles.forEach((circle, j) => {
+        donateSumItems[5].classList.add('donate__item-active');
+        donateCircles[5].classList.add('donate__circle-active');
+        amountAnimals[5].classList.add('amount__animal-active');
 
     item.addEventListener('click', () => {
         let itemValue = donateSumItems[i].innerHTML;
+        donateForm.value = itemValue;
+    });
+
+    circle.addEventListener('click', () => {
+        let itemValue = donateSumItems[j].innerHTML;
         donateForm.value = itemValue;
     });
 
@@ -84,15 +90,20 @@ donateSumItems.forEach((item, i) => {
             donateCircles[3].classList.add('donate__circle-active');
             amountAnimals[3].classList.add('amount__animal-active');
         } else if (formValue == 1000) {
-            donateSumItems[5].classList.remove('donate__item-active');
-            donateCircles[5].classList.remove('donate__circle-active');
-            amountAnimals[5].classList.remove('amount__animal-active');
-            donateSumItems[i].classList.remove('donate__item-active');
-            donateCircles[i].classList.remove('donate__circle-active');
-            amountAnimals[i].classList.remove('amount__animal-active');
-            donateSumItems[2].classList.add('donate__item-active');
-            donateCircles[2].classList.add('donate__circle-active');
-            amountAnimals[2].classList.add('amount__animal-active');
+            if (window.innerWidth >= 641) {
+                donateSumItems[5].classList.remove('donate__item-active');
+                donateCircles[5].classList.remove('donate__circle-active');
+                amountAnimals[5].classList.remove('amount__animal-active');
+                donateSumItems[i].classList.remove('donate__item-active');
+                donateCircles[i].classList.remove('donate__circle-active');
+                amountAnimals[i].classList.remove('amount__animal-active');
+                donateSumItems[2].classList.add('donate__item-active');
+                donateCircles[2].classList.add('donate__circle-active');
+                amountAnimals[2].classList.add('amount__animal-active');
+            } else {
+                donateSumItems[i].classList.remove('donate__item-active');
+                donateCircles[i].classList.remove('donate__circle-active');
+            }
         } else if ((formValue == 2000)) {
             if (window.innerWidth >= 641) {
                 donateSumItems[5].classList.remove('donate__item-active');
@@ -116,7 +127,14 @@ donateSumItems.forEach((item, i) => {
                 donateSumItems[0].classList.add('donate__item-active');
                 donateCircles[0].classList.add('donate__circle-active');
                 amountAnimals[0].classList.add('amount__animal-active');
+            } else {
+                donateSumItems[i].classList.remove('donate__item-active');
+                donateCircles[i].classList.remove('donate__circle-active');
             }
+        } else {
+            donateSumItems[i].classList.remove('donate__item-active');
+            donateCircles[i].classList.remove('donate__circle-active');
         };
     });
+});
 });

@@ -66,31 +66,32 @@
     background: #4B9200;
 }
 
-.pets__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.pets__carousel {
+    display: flex;
+    flex-direction: column;
     max-width: 1160px;
-    max-height: 872px;
-    gap: 20px 30px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.pets__card {
-    max-width: 366px;
+.pets__content {
+    display: flex;
+    gap: 29px;
+    transition: all 0.5s ease-in-out;
+}
 
+.pets__slide {
+    display: flex;
+    gap: 29px;
+}
+
+.pets__card {
+    min-width: 366px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 5px;
     padding: 1px;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
 }
 
 .pets__block {
@@ -128,6 +129,60 @@
     padding-right: 10px;
     opacity: 1;
     transition: 0.5s ease-in-out;
+}
+
+.animation__right {
+    animation: slideRight 1s;
+    -webkit-animation: slideRight 1s;
+}
+
+.animation__left {
+    animation: slideLeft 1s;
+    -webkit-animation: slideLeft 1s;
+}
+
+@keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(366px);
+        transform: translateX(366px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(366px);
+        transform: translateX(366px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(-366px);
+        transform: translateX(-366px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    0% {
+        -webkit-transform: translateX(-366px);
+        transform: translateX(-366px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
 }
 
 .pets__name {
@@ -251,9 +306,8 @@
 
 @media (max-width: 1400px) {
 
-    .pets__content {
-        max-height: 944px;
-        gap: 92px 29px;
+    .pets__carousel {
+        gap: 92px;
     }
 
     .pets__arrowbutton {
@@ -266,6 +320,17 @@
 
     .arrow-right {
         right: 200px;
+    }
+}
+
+@media (max-width: 1220px) {
+
+    .pets__content {
+        max-width: 942px;
+    }
+
+    .pets__card {
+        min-width: 294px;
     }
 }
 
@@ -308,6 +373,13 @@
     }
 }
 
+@media (max-width: 999px) {
+
+    .pets__content {
+        max-width: 618px;
+    }
+}
+
 @media (max-width: 920px) {
 
     .pets {
@@ -317,16 +389,6 @@
 
     .pets__container {
         margin-top: 81px;
-    }
-
-    .pets__content {
-        grid-template-columns: repeat(2, 1fr);
-        max-height: 784px;
-    }
-
-    .pets__photo {
-        max-width: 285px;
-        max-height: 285px;
     }
 }
 
@@ -341,8 +403,21 @@
         transform: translateY(171px);
     }
 
+    .pets__content {
+        max-width: 600px;
+    }
+
+    .pets__card {
+        min-width: 285px;
+    }
+
     .pets__block {
         max-height: 329px;
+    }
+
+    .pets__photo {
+        max-width: 285px;
+        max-height: 285px;
     }
 
     .pets__feature {
@@ -367,18 +442,29 @@
     }
 
     .arrow-left {
-        top: calc((100% - 100px) / 2);
+        top: calc((100% - 70px) / 2);
         left: calc((100% - 153px) / 2);
     }
 
     .arrow-right {
-        top: calc((100% - 100px) / 2);
+        top: calc((100% - 70px) / 2);
         right: calc((100% - 153px) / 2);
     }
 
     .pets__button {
-        margin-top: 32px;
+        margin-top: 62px;
         margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .pets__content {
+        max-width: 470px;
+    }
+
+    .pets__card {
+        min-width: 220px;
     }
 }
 
@@ -409,8 +495,13 @@
         display: none;
     }
 
+    #pets2 {
+        display: none;
+    }
+
     .pets__content {
-        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        flex-wrap: wrap;
         max-height: 1388px;
         gap: 18.5px;
     }
