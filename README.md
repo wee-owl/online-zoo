@@ -1,15 +1,21 @@
-## Project: [Online-ZOO](https://wee-owl.github.io/online-zoo/main.html)  
+# [Online-ZOO](https://wee-owl.github.io/online-zoo/main.html)
+Online-ZOO - это учебный проект [The Rolling Scopes School](https://rs.school/), разработанный по [макету в Figma](https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online).  
+Это платформа, которая с помощью веб-камер собирает информацию о животных из разных зоопарков.  
+Предполагается, что пользователь может открыть страницу ресурса зоопарка, понаблюдать за одним из животных, почитать отзывы или сделать пожертвование, которое пойдет на покупку еды.  
+В рамках задачи была сделана адаптивная верстка и интерактивность главной страницы и страницы пожертвований (`main` и `donate`).  
 
-### Description:  
-Online-ZOO - [RSSchool task](https://rs.school/). It's a platform that collects information about animals from various zoos using webcams. It is assumed that the user can open the zoo's resource page, watch one of the animals, or make a donation that will go towards buying food. As part of the task, an adaptive layout and interactivity of the main page and the donation page were made.  
+<img src="https://github.com/wee-owl/online-zoo/assets/95621680/dee625e7-4fb2-467e-8ca0-c86e04cd0870" width="500" height="" alt="SongBird Quiz cover">
 
-The possibilities this website provides you with:
-* Info about the zoo
-* Gallery of available animals
-* Previous customers' feedback
-* Possibility to donate eo animals:
-    * monthly / once
-    * sum of your choice
-* Adaptive layout for comfortable surfing on mobiles and tablets
+## Технологии
+- JavaScript
+- HTML
+- CSS
+- Pixel Perfect верстка
+- модульная верстка
 
-![scrsht](https://user-images.githubusercontent.com/95621680/191920265-bb84eeef-80fd-4d27-9a95-f81a55ab5147.png)  
+## Реализованная функциональность
+- бесконечная карусель с животными на странице `main`
+- горизонтальная карусель отзывов на странице `main`, при ширине экрана меньше 640px - вертикальная карусель с возможностью открытия модального окна с отзывом
+- валидация поля для ввода адреса электронной почты в `footer`
+- на странице `donate` панель `amount` в блоке `pick and feed a friend` отражает сумму, ввденную в поле и совпадающую с указанной на шкале
+- при нажатии на сумму, указанную на шкале `amount`, сумма отразится в поле ввода
